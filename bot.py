@@ -3,7 +3,7 @@ from time import sleep
 from termcolor import cprint
 from datetime import datetime
 import os
-# from pygame import mixer
+from pygame import mixer
 from dotenv import load_dotenv
 
 
@@ -25,9 +25,9 @@ PARAMS = {
 }
 
 requests.get(TelegramURL.format("App has been Started!"))
-# mixer.init()
-# mixer.music.load('./sound/dingdong.wav')
-# mixer.music.play(0)
+mixer.init()
+mixer.music.load('./sound/dingdong.wav')
+mixer.music.play(0)
 
 while True:
 
@@ -52,8 +52,8 @@ while True:
         else:
             for slot in responseData["sessions"]:
                 if slot["available_capacity_dose1"] + slot["available_capacity_dose2"] + slot["available_capacity"] > 1:
-                    # mixer.music.load("./sound/airraid.wav")
-                    # mixer.music.play(0)
+                    mixer.music.load("./sound/airraid.wav")
+                    mixer.music.play(0)
                     cprint(str(slot["name"]) + ' (for ' +
                            str(slot["min_age_limit"]) + '+)', 'red', attrs=['reverse', 'blink'])
                     requests.get(TelegramURL.format(str(slot["name"]) + ' (for ' +
