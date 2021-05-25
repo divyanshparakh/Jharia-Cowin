@@ -3,4 +3,4 @@ requests
 termcolor
 datetime
 pygame
-load_dotenv
+dotenv
