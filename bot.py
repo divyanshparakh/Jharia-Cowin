@@ -16,7 +16,7 @@ TelegramURL = 'https://api.telegram.org/bot' + TokenID + \
     '/sendMessage?chat_id=' + ChatID + '&text={}'
 
 CowinAPI = "https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/findByPin"
-Date = str(datetime.now().day + 1) + '-' + \
+Date = str(datetime.now().day) + '-' + \
     str(datetime.now().month) + '-' + str(datetime.now().year)
 Pincode = os.getenv('Pincode')
 PARAMS = {
